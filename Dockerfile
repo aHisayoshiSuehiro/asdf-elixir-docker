@@ -16,7 +16,7 @@ RUN echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 RUN echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.1.0
 RUN apt install curl
-COPY ./.tool-versions /root/.tool-versions
+RUN echo "erlang 19.1" >> /root/.tool-versions ; echo "elixir 1.3.4" >> /root/.tool-versions; echo "ruby 2.3.1" >> /root/.tool-versions; echo "nodejs 6.3.1\n" >> /root/.tool-versions
 RUN /root/.asdf/bin/asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
 RUN /root/.asdf/bin/asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 RUN /root/.asdf/bin/asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
