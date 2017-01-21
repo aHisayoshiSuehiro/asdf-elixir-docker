@@ -19,7 +19,7 @@ RUN apt install -y libtinfo-dev libncurses5-dev
 RUN apt install -y libssl-dev
 RUN apt install -y inotify-tools
 RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.1.0
-RUN echo "erlang 19.2" >> /root/.tool-versions ; echo "elixir 1.4.0" >> /root/.tool-versions; echo "ruby 2.3.1" >> /root/.tool-versions; echo "nodejs 6.3.1\n" >> /root/.tool-versions
+RUN echo "erlang 19.2" >> /root/.tool-versions ; echo "elixir 1.3.4" >> /root/.tool-versions; echo "ruby 2.3.1" >> /root/.tool-versions; echo "nodejs 6.3.1\n" >> /root/.tool-versions
 RUN /root/.asdf/bin/asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
 RUN /root/.asdf/bin/asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 RUN /root/.asdf/bin/asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
