@@ -24,7 +24,7 @@ RUN /root/.asdf/bin/asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlan
 RUN /root/.asdf/bin/asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 RUN /root/.asdf/bin/asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 RUN /root/.asdf/bin/asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-RUN cd /root/ && /root/.asdf/bin/asdf install
+RUN cd /root/ && /root/.asdf/bin/asdf install && rm -rf /tmp/*
 RUN echo '. $HOME/.asdf/asdf.sh' >> ~/.bash_profile
 RUN echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile
 
