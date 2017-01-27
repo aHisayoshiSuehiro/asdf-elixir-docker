@@ -1,6 +1,7 @@
 #利用するUbuntuのイメージ
 FROM ubuntu:16.04
 
+ENV LANG=en_US.UTF-8
 # 必要なパッケージのインストール
 RUN apt update
 RUN apt install -y unzip cmake make git xz-utils liblzma-dev
