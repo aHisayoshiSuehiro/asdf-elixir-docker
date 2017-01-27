@@ -14,7 +14,7 @@ RUN echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 RUN echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 RUN apt-get install -y curl libtinfo-dev libncurses5-dev libssl-dev inotify-tools
 RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.1.0
-RUN echo "erlang 19.2" >> /root/.tool-versions ; echo "elixir 1.3.4" >> /root/.tool-versions; echo "ruby 2.3.1" >> /root/.tool-versions; echo "nodejs 6.9.4\n" >> /root/.tool-versions
+ADD ./tool-versions /root/.tool-versions
 RUN /root/.asdf/bin/asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 RUN /root/.asdf/bin/asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 RUN /root/.asdf/bin/asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
