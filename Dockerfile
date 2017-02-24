@@ -14,7 +14,7 @@ RUN mkdir -p /var/run/sshd
 RUN echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 RUN echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 RUN apt-get install -y curl libtinfo-dev libncurses5-dev libssl-dev inotify-tools
-RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.2.1
+RUN rm -rf ~/.asdf; git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.2.1
 ADD ./tool-versions /root/.tool-versions
 RUN /root/.asdf/bin/asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 RUN /root/.asdf/bin/asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
