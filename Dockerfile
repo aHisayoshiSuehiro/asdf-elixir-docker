@@ -30,7 +30,7 @@ RUN /root/.asdf/bin/asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.gi
 RUN /root/.asdf/bin/asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 RUN /root/.asdf/bin/asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
 RUN /root/.asdf/bin/asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-RUN cd /root/ && /root/.asdf/bin/asdf install erlang 20.2.2 && /root/.asdf/bin/asdf install elixir 1.5.3 && rm -rf /tmp/*
+RUN cd /root/ && /root/.asdf/bin/asdf install erlang 20.2.2 && /root/.asdf/bin/asdf install elixir 1.5.3 && /root/.asdf/bin/asdf install ruby 2.3.1 && /root/.asdf/bin/asdf install nodejs 6.12.3 && rm -rf /tmp/*
 RUN echo '. $HOME/.asdf/asdf.sh' >> ~/.bash_profile
 RUN echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile
 ENV PATH=/root/.asdf/bin:/root/.asdf/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
